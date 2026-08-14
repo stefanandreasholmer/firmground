@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,300..800;1,400..700&family=Spectral:ital,wght@0,300;0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root { --accent: oklch(0.72 0.155 78); --accent-deep: oklch(0.52 0.125 70); }
+  html, body { margin:0; padding:0; background: oklch(0.96 0.008 75); scroll-behavior:smooth; }
+  * { box-sizing: border-box; }
+  a { color: var(--accent-deep); text-decoration: underline; text-underline-offset: 3px; }
+  a:hover { color: oklch(0.24 0.012 75); }
+  ::selection { background: oklch(0.88 0.09 85); }
+</style>
+</helmet>
+
+<div style="background:oklch(0.96 0.008 75);color:oklch(0.24 0.012 75);font-family:'Libre Franklin',system-ui,sans-serif;-webkit-font-smoothing:antialiased">
+
+  <!-- MASTHEAD -->
+  <div data-screen-label="Masthead" style="max-width:1160px;margin:0 auto;padding:0 56px">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:26px 0;border-bottom:1px solid oklch(0.87 0.010 75)">
+      <div style="display:flex;align-items:center;gap:13px">
+        <div style="display:flex;width:28px;height:28px;gap:2px">
+          <div style="flex:0 0 60%;background:oklch(0.24 0.012 75)"></div>
+          <div style="flex:1;background:var(--accent)"></div>
+        </div>
+        <div style="font-weight:700;font-size:18px;letter-spacing:-0.025em">FirmGround</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:28px">
+        <a href="#pricing" style="font-size:14px;font-weight:600;color:oklch(0.34 0.012 75);text-decoration:none">Pricing</a>
+        <a href="#waitlist" style="background:oklch(0.24 0.012 75);color:oklch(0.96 0.008 75);padding:10px 18px;font-size:14px;font-weight:600;border-radius:2px;text-decoration:none" style-hover="background:oklch(0.32 0.012 75);color:oklch(0.96 0.008 75)">Join the waitlist</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div data-screen-label="Hero" style="max-width:1160px;margin:0 auto;padding:100px 56px 0">
+    <h1 style="font-family:Spectral,Georgia,serif;font-weight:400;font-size:clamp(46px,6.4vw,84px);line-height:0.99;letter-spacing:-0.028em;margin:0 0 32px;max-width:18ch;text-wrap:balance">The project was decided before anyone wrote an estimate.</h1>
+    <p style="font-size:22px;line-height:1.5;color:oklch(0.36 0.012 75);margin:0 0 44px;max-width:44ch;text-wrap:pretty">Firmground turns an incomplete client inquiry into a brief your delivery team can commit to.</p>
+    <div style="display:flex;gap:14px;align-items:center;margin-bottom:80px">
+      <a href="#waitlist" style="background:oklch(0.24 0.012 75);color:oklch(0.96 0.008 75);padding:14px 26px;font-size:16px;font-weight:600;border-radius:2px;text-decoration:none" style-hover="background:oklch(0.32 0.012 75);color:oklch(0.96 0.008 75)">Join the waitlist</a>
+      <a href="#letter" style="padding:14px 12px;font-size:16px;font-weight:600">Read why it exists</a>
+    </div>
+
+    <!-- BENEFITS -->
+    <div data-screen-label="Benefits" style="display:flex;flex-wrap:wrap;gap:1px;background:oklch(0.87 0.010 75);border:1px solid oklch(0.87 0.010 75)">
+      <div style="flex:1 1 280px;background:oklch(0.99 0.006 75);padding:28px 30px 32px">
+        <div style="width:34px;height:8px;display:flex;gap:2px;margin-bottom:20px"><div style="flex:0 0 60%;background:oklch(0.24 0.012 75)"></div><div style="flex:1;background:var(--accent)"></div></div>
+        <p style="margin:0;font-size:16px;line-height:1.6;color:oklch(0.32 0.012 75)"><strong style="color:oklch(0.24 0.012 75)">Fewer bad pursuits.</strong> You find out what's missing in week one, not after signing.</p>
+      </div>
+      <div style="flex:1 1 280px;background:oklch(0.99 0.006 75);padding:28px 30px 32px">
+        <div style="width:34px;height:8px;display:flex;gap:2px;margin-bottom:20px"><div style="flex:0 0 60%;background:oklch(0.24 0.012 75)"></div><div style="flex:1;background:var(--accent)"></div></div>
+        <p style="margin:0;font-size:16px;line-height:1.6;color:oklch(0.32 0.012 75)"><strong style="color:oklch(0.24 0.012 75)">Less senior time burned on unwon work.</strong> Delivery reviews a brief, not a mystery.</p>
+      </div>
+      <div style="flex:1 1 280px;background:oklch(0.99 0.006 75);padding:28px 30px 32px">
+        <div style="width:34px;height:8px;display:flex;gap:2px;margin-bottom:20px"><div style="flex:0 0 60%;background:oklch(0.24 0.012 75)"></div><div style="flex:1;background:var(--accent)"></div></div>
+        <p style="margin:0;font-size:16px;line-height:1.6;color:oklch(0.32 0.012 75)"><strong style="color:oklch(0.24 0.012 75)">Estimates you can defend,</strong> because every assumption behind the number is written down.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOUNDER LETTER -->
+  <div id="letter" data-screen-label="Founder letter" style="max-width:1160px;margin:0 auto;padding:120px 56px 0">
+    <div style="border-top:2px solid oklch(0.24 0.012 75);padding-top:14px;margin-bottom:52px;display:flex;align-items:baseline;gap:18px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;font-weight:700">01</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:oklch(0.52 0.012 75)">A letter from the founder</div>
+    </div>
+    <div style="max-width:680px;margin:0 auto">
+      <h2 style="font-family:Spectral,Georgia,serif;font-weight:400;font-size:clamp(32px,4vw,46px);line-height:1.08;letter-spacing:-0.025em;margin:0 0 40px">Tell me if this sounds familiar.</h2>
+      <div style="font-family:Spectral,Georgia,serif;font-size:19px;line-height:1.65;color:oklch(0.28 0.012 75);display:flex;flex-direction:column;gap:22px">
+        <p style="margin:0">Hey there,</p>
+        <p style="margin:0">Fifteen years running a software firm of a hundred people, and I carried sales myself the whole way. Several hundred client inquiries. Not one arrived ready to estimate.</p>
+        <p style="margin:0">That part everyone knows. Here's the part that took me longer to see.</p>
+        <p style="margin:0">The problem was never that the client wrote a bad brief. It was that nobody in my firm knew everything that was missing from it. Sales spotted the vague budget. My tech lead spotted the integration nobody had mentioned. A designer read the same document and asked who the users actually were, which hadn't occurred to either of us. The knowledge of what to ask was spread across four people who were never in the room at the same time, and certainly not inside the two days we had to respond.</p>
+        <p style="margin:0">So we did what everyone does. Sales answered what they could. Delivery got pulled in and came back with questions instead of an assessment. The questions went to the client, who took a week and answered half of them. Another round. Then time ran out and we either rushed the estimate or spent a week of senior delivery time on work we might well lose.</p>
+        <p style="margin:0">The expensive part was never the sales exec's afternoon. It was my delivery leads getting briefs to the point where estimating was possible at all, over and over, on work nobody had won.</p>
+        <p style="margin:0">And underneath that, something worse. By the time an underspecified project reaches delivery, the outcome is mostly already set. Put your best lead on it and what you get is a well-managed failure. That isn't a delivery problem. It's an intake problem, and intake is a much cheaper place to spend the effort.</p>
+        <p style="margin:0">Every firm I've run had a written standard for what a complete brief contains. In every one of them it lived in a document nobody opened. Firmground is that document turned into something that runs. You write down once what sales, delivery, design and product each know to ask. Every inquiry gets held to it the same way, whoever catches it.</p>
+        <p style="margin:0">I'm building it because I needed it. I'd like you to try it and tell me where it's wrong.</p>
+      </div>
+      <div style="margin-top:36px;border-left:2px solid var(--accent);padding-left:20px">
+        <div style="font-family:Spectral,Georgia,serif;font-size:22px;font-style:italic">Andreas Holmer</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:oklch(0.52 0.012 75);margin-top:6px">Founder</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <div data-screen-label="How it works" style="max-width:1160px;margin:0 auto;padding:120px 56px 0">
+    <div style="border-top:2px solid oklch(0.24 0.012 75);padding-top:14px;margin-bottom:40px;display:flex;align-items:baseline;gap:18px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;font-weight:700">02</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:oklch(0.52 0.012 75)">The process</div>
+    </div>
+    <h2 style="font-size:clamp(28px,3.2vw,38px);font-weight:700;letter-spacing:-0.02em;margin:0 0 56px;max-width:26ch">How it works. Still no configuration project.</h2>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:72px;align-items:start">
+      <div style="display:flex;flex-direction:column">
+        <div style="display:flex;gap:22px;padding:20px 0;border-bottom:1px solid oklch(0.89 0.008 75)">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--accent-deep);flex:0 0 24px;padding-top:3px">1</div>
+          <p style="margin:0;font-size:16px;line-height:1.6;color:oklch(0.30 0.012 75)">Upload whatever the client sent. A meeting transcript, a PDF, a forwarded email thread, all of it at once.</p>
+        </div>
+        <div style="display:flex;gap:22px;padding:20px 0;border-bottom:1px solid oklch(0.89 0.008 75)">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--accent-deep);flex:0 0 24px;padding-top:3px">2</div>
+          <p style="margin:0;font-size:16px;line-height:1.6;color:oklch(0.30 0.012 75)">Firmground reads it against every rubric you have and tells you which kind of work this is. You don't classify the inquiry before you've understood it.</p>
+        </div>
+        <div style="display:flex;gap:22px;padding:20px 0;border-bottom:1px solid oklch(0.89 0.008 75)">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--accent-deep);flex:0 0 24px;padding-top:3px">3</div>
+          <p style="margin:0;font-size:16px;line-height:1.6;color:oklch(0.30 0.012 75)">It shows you what's missing, criterion by criterion, and what that means for what you can sell.</p>
+        </div>
+        <div style="display:flex;gap:22px;padding:20px 0;border-bottom:1px solid oklch(0.89 0.008 75)">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--accent-deep);flex:0 0 24px;padding-top:3px">4</div>
+          <p style="margin:0;font-size:16px;line-height:1.6;color:oklch(0.30 0.012 75)">It writes the follow-up questions for you, tied to the actual gaps. Send them. Add the answers as they arrive.</p>
+        </div>
+        <div style="display:flex;gap:22px;padding:20px 0;border-bottom:1px solid oklch(0.89 0.008 75)">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--accent-deep);flex:0 0 24px;padding-top:3px">5</div>
+          <p style="margin:0;font-size:16px;line-height:1.6;color:oklch(0.30 0.012 75)">Where an answer is never going to come, Firmground states it as an assumption, marked clearly as one, so nobody prices it as fact.</p>
+        </div>
+        <div style="display:flex;gap:22px;padding:20px 0">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--accent-deep);flex:0 0 24px;padding-top:3px">6</div>
+          <p style="margin:0;font-size:16px;line-height:1.6;color:oklch(0.30 0.012 75)">Send it for estimation. Your delivery team gets a brief worth their time, once, instead of three rounds of questions they had to write themselves.</p>
+        </div>
+      </div>
+
+      <div>
+        <div style="border:1px solid oklch(0.87 0.010 75);background:repeating-linear-gradient(-45deg, oklch(0.985 0.006 75), oklch(0.985 0.006 75) 12px, oklch(0.955 0.008 75) 12px, oklch(0.955 0.008 75) 24px);min-height:420px;display:flex;align-items:center;justify-content:center;border-radius:2px">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:oklch(0.48 0.012 75);background:oklch(0.99 0.006 75);border:1px solid oklch(0.87 0.010 75);padding:8px 14px;border-radius:2px">[ Screenshot: Lead overview ]</div>
+        </div>
+        <p style="font-family:Spectral,Georgia,serif;font-style:italic;font-size:15px;line-height:1.6;color:oklch(0.44 0.012 75);margin:14px 0 0">One inquiry across three rounds. What the client said, what's still open, what's been assumed.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMPLETE ENOUGH -->
+  <div data-screen-label="Complete enough" style="max-width:1160px;margin:0 auto;padding:120px 56px 0">
+    <div style="border-top:2px solid oklch(0.24 0.012 75);padding-top:14px;margin-bottom:40px;display:flex;align-items:baseline;gap:18px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;font-weight:700">03</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:oklch(0.52 0.012 75)">The bar</div>
+    </div>
+    <h2 style="font-size:clamp(28px,3.2vw,38px);font-weight:700;letter-spacing:-0.02em;margin:0 0 28px">Complete enough for what?</h2>
+    <p style="font-size:18px;line-height:1.6;color:oklch(0.34 0.012 75);margin:0 0 16px;max-width:58ch">There's no single bar for a complete brief. There's a bar per commercial model, and they're a long way apart.</p>
+    <p style="font-size:18px;line-height:1.6;color:oklch(0.34 0.012 75);margin:0 0 48px;max-width:58ch">Two kinds of thing go missing from an inquiry, and they don't behave the same.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:1px;background:oklch(0.87 0.010 75);border:1px solid oklch(0.87 0.010 75);margin-bottom:56px">
+      <div style="background:oklch(0.99 0.006 75);padding:30px 32px 34px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:16px">The bar doesn't move</div>
+        <div style="font-size:20px;font-weight:700;letter-spacing:-0.015em;margin-bottom:14px">Expectations</div>
+        <p style="margin:0;font-size:15px;line-height:1.65;color:oklch(0.34 0.012 75)">Budget. Who decides. What success means. The hard constraints. The problem underneath the request. The bar here doesn't move. A brief vague about who signs off is a bad brief whether you're selling discovery or a fixed-price build.</p>
+      </div>
+      <div style="background:oklch(0.99 0.006 75);padding:30px 32px 34px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:16px">The bar moves with the risk</div>
+        <div style="font-size:20px;font-weight:700;letter-spacing:-0.015em;margin-bottom:14px">Specification</div>
+        <p style="margin:0;font-size:15px;line-height:1.65;color:oklch(0.34 0.012 75)">What actually gets built. The bar here moves with who's carrying the risk. "A checkout, some kind of loyalty thing" is enough to staff a team and start work on time and materials. It's nowhere near enough to promise a number, because on fixed price every fuzzy edge is money you've already committed.</p>
+      </div>
+    </div>
+
+    <p style="font-size:16px;line-height:1.65;color:oklch(0.34 0.012 75);margin:0 0 40px;max-width:60ch">Same rubric either way. Same ideal answers. What changes is how close to them you need to get.</p>
+
+    <div style="border:1px solid oklch(0.87 0.010 75);background:oklch(0.99 0.006 75);padding:32px 36px 36px;margin-bottom:40px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:oklch(0.52 0.012 75);margin-bottom:26px">Fig. 1 · What the material lets you sell</div>
+      <div style="position:relative;height:34px;margin-bottom:10px">
+        <div style="position:absolute;top:11px;left:0;right:0;height:12px;background:oklch(0.93 0.008 75)"></div>
+        <div style="position:absolute;top:11px;left:0;height:12px;width:60%;background:oklch(0.55 0.16 30)"></div>
+        <div style="position:absolute;top:11px;left:60%;height:12px;width:20%;background:var(--accent)"></div>
+        <div style="position:absolute;top:11px;left:80%;height:12px;right:0;background:oklch(0.24 0.012 75)"></div>
+        <div style="position:absolute;top:0;left:60%;width:1px;height:34px;background:oklch(0.45 0.012 75)"></div>
+        <div style="position:absolute;top:0;left:80%;width:1px;height:34px;background:oklch(0.45 0.012 75)"></div>
+      </div>
+      <div style="display:flex;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.06em;text-transform:uppercase;color:oklch(0.50 0.012 75);margin-bottom:24px">
+        <div style="width:60%">Under 60 · sell discovery first</div>
+        <div style="width:20%">60–79 · T&amp;M</div>
+        <div style="flex:1">80+ · fixed price</div>
+      </div>
+      <p style="margin:0;font-size:15px;line-height:1.6;color:oklch(0.34 0.012 75);max-width:62ch">So Firmground doesn't ask what you're hoping to sell. The material decides that. Under 60, sell discovery first. 60 to 79, time and materials. 80 and up, you can commit to a price. Your bands, in firm settings, applied the same way every time.</p>
+    </div>
+
+    <p style="font-family:Spectral,Georgia,serif;font-size:21px;line-height:1.5;color:oklch(0.28 0.012 75);margin:0;max-width:52ch">If you want to bid fixed price and this one came back at 45, that's not a verdict. It's a list of work to do, and how much of it you do is your call.</p>
+  </div>
+
+  <!-- FIT -->
+  <div data-screen-label="Fit" style="max-width:1160px;margin:0 auto;padding:120px 56px 0">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:72px;align-items:start">
+      <div>
+        <div style="border-top:2px solid oklch(0.24 0.012 75);padding-top:14px;margin-bottom:40px;display:flex;align-items:baseline;gap:18px">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;font-weight:700">04</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:oklch(0.52 0.012 75)">Fit</div>
+        </div>
+        <h2 style="font-size:clamp(28px,3.2vw,38px);font-weight:700;letter-spacing:-0.02em;margin:0 0 28px">Is this even work you do?</h2>
+        <p style="font-size:16px;line-height:1.65;color:oklch(0.34 0.012 75);margin:0 0 20px">Because Firmground reads every inquiry against all your rubrics, it also notices when something doesn't fit any of them.</p>
+        <p style="font-size:16px;line-height:1.65;color:oklch(0.34 0.012 75);margin:0 0 20px">Not a score. A sentence.</p>
+        <div style="border-left:3px solid var(--accent);background:oklch(0.94 0.030 85);padding:18px 22px;margin:0 0 20px">
+          <p style="margin:0;font-family:Spectral,Georgia,serif;font-style:italic;font-size:17px;line-height:1.55;color:oklch(0.28 0.012 75)">Closest match: SaaS build. Two things this client is asking for aren't covered by any rubric you have: hardware integration, on-site training.</p>
+        </div>
+        <p style="font-size:16px;line-height:1.65;color:oklch(0.34 0.012 75);margin:0">That's the question a founder asks before the estimating question. Sometimes the answer is yes, we do that, I just never wrote it down. Sometimes it's no, and finding that out on day one is worth more than a good brief.</p>
+      </div>
+      <div style="background:oklch(0.24 0.012 75);color:oklch(0.90 0.008 75);padding:36px 38px 40px;margin-top:54px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:20px">Over a quarter</div>
+        <p style="font-family:Spectral,Georgia,serif;font-size:23px;line-height:1.45;margin:0 0 18px;color:oklch(0.94 0.008 75)">Six inquiries wanted a thing you don't sell. That's not six lost deals.</p>
+        <p style="font-size:15px;line-height:1.65;margin:0;color:oklch(0.78 0.008 75)">That's a market telling you something, and until now it arrived as a vague feeling rather than a list.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- RUBRIC -->
+  <div data-screen-label="Rubric" style="max-width:1160px;margin:0 auto;padding:120px 56px 0">
+    <div style="border-top:2px solid oklch(0.24 0.012 75);padding-top:14px;margin-bottom:40px;display:flex;align-items:baseline;gap:18px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;font-weight:700">05</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:oklch(0.52 0.012 75)">The standard</div>
+    </div>
+    <h2 style="font-size:clamp(28px,3.2vw,38px);font-weight:700;letter-spacing:-0.02em;margin:0 0 20px">What's a rubric?</h2>
+    <p style="font-size:18px;line-height:1.6;color:oklch(0.34 0.012 75);margin:0 0 48px;max-width:54ch">Your leadership writes this once. Everyone else never has to think about it.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:72px;align-items:start">
+      <div>
+        <p style="font-size:16px;line-height:1.65;color:oklch(0.34 0.012 75);margin:0 0 20px">A rubric is your firm's definition of a complete brief for one kind of work: what has to be known before anyone can responsibly put a number on it. Each criterion has two parts.</p>
+        <p style="font-size:16px;line-height:1.65;color:oklch(0.34 0.012 75);margin:0 0 14px"><strong>A description.</strong> What you need to know, and why it changes the price.</p>
+        <p style="font-size:16px;line-height:1.65;color:oklch(0.34 0.012 75);margin:0 0 28px"><strong>An ideal answer.</strong> What a good answer looks like, in your words. Not a form for the client to fill in. A reference point, so Firmground can tell the difference between a brief that mentions success metrics and one that actually has them.</p>
+        <p style="font-size:16px;line-height:1.65;color:oklch(0.34 0.012 75);margin:0 0 20px">One rubric per service you sell. That does two jobs. A discovery brief and a build brief need different things known, so the questions come out right. And taken together, your rubrics are a written description of what your firm does, which is what lets Firmground tell you when an inquiry falls outside it.</p>
+        <p style="font-size:16px;line-height:1.65;color:oklch(0.34 0.012 75);margin:0">Start from one of ours and edit it. Change it whenever you learn something. Past scores stay on the version they were scored against.</p>
+      </div>
+      <div style="border:1px solid oklch(0.87 0.010 75);background:oklch(0.99 0.006 75);padding:30px 32px 34px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:oklch(0.52 0.012 75);margin-bottom:22px">One criterion, as written</div>
+        <div style="display:flex;flex-direction:column;gap:20px">
+          <div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:7px">Criterion</div>
+            <div style="font-size:17px;font-weight:700;letter-spacing:-0.01em">Success metrics</div>
+          </div>
+          <div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:7px">What we need</div>
+            <div style="font-size:15px;line-height:1.6;color:oklch(0.32 0.012 75)">What this project has to move, and by how much. Numbers are what make this strong.</div>
+          </div>
+          <div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:7px">An ideal answer</div>
+            <div style="font-family:Spectral,Georgia,serif;font-size:16px;line-height:1.6;color:oklch(0.28 0.012 75)">"+15% conversion within 6 months. +20% average order value. 40% less developer time on content changes. Sub-1.5s LCP."</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SAME SHAPE -->
+  <div data-screen-label="Same shape" style="max-width:1160px;margin:0 auto;padding:120px 56px 0">
+    <div style="border-top:2px solid oklch(0.24 0.012 75);padding-top:14px;margin-bottom:40px;display:flex;align-items:baseline;gap:18px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;font-weight:700">06</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:oklch(0.52 0.012 75)">The output</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:72px;align-items:start">
+      <div>
+        <h2 style="font-size:clamp(28px,3.2vw,38px);font-weight:700;letter-spacing:-0.02em;margin:0 0 28px;max-width:20ch">And every brief comes out the same shape.</h2>
+        <p style="font-size:16px;line-height:1.65;color:oklch(0.34 0.012 75);margin:0 0 20px">One inquiry arrives as a spreadsheet. The next is a slide deck. The one after that is a call transcript and a forwarded thread. Your team reads each one cold, in whatever order the client happened to write it.</p>
+        <p style="font-size:16px;line-height:1.65;color:oklch(0.34 0.012 75);margin:0 0 20px">What comes out of Firmground always looks the same. Same criteria, same order, what the client said and what's been assumed marked the same way, every time.</p>
+        <p style="font-size:16px;line-height:1.65;color:oklch(0.34 0.012 75);margin:0">After ten of these, your team stops estimating from scratch. This one looks like the retail build from last spring, and you know how that one went. That isn't a time saving. It's something your firm couldn't do at all before, because no two briefs were ever comparable.</p>
+      </div>
+      <div>
+        <div style="border:1px solid oklch(0.87 0.010 75);background:repeating-linear-gradient(-45deg, oklch(0.985 0.006 75), oklch(0.985 0.006 75) 12px, oklch(0.955 0.008 75) 12px, oklch(0.955 0.008 75) 24px);min-height:340px;display:flex;align-items:center;justify-content:center;border-radius:2px">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:oklch(0.48 0.012 75);background:oklch(0.99 0.006 75);border:1px solid oklch(0.87 0.010 75);padding:8px 14px;border-radius:2px">[ Screenshot: Scored brief ]</div>
+        </div>
+        <p style="font-family:Spectral,Georgia,serif;font-style:italic;font-size:15px;line-height:1.6;color:oklch(0.44 0.012 75);margin:14px 0 0">Two very different inquiries, one shape. Client-stated, assumed, and missing, marked the same way in both.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- YES LIST -->
+  <div data-screen-label="Yes list" style="max-width:1160px;margin:0 auto;padding:120px 56px 0">
+    <div style="border-top:2px solid oklch(0.24 0.012 75);padding-top:14px;margin-bottom:40px;display:flex;align-items:baseline;gap:18px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;font-weight:700">07</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:oklch(0.52 0.012 75)">Questions</div>
+    </div>
+    <h2 style="font-size:clamp(28px,3.2vw,38px);font-weight:700;letter-spacing:-0.02em;margin:0 0 48px;max-width:24ch">All these questions have the same answer: yes.</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:0 72px">
+      <div style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid oklch(0.89 0.008 75)"><div style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--accent-deep);padding-top:3px">YES</div><p style="margin:0;font-size:16px;line-height:1.55;color:oklch(0.32 0.012 75)">Can I use <strong>my firm's</strong> definition of a complete brief, not yours?</p></div>
+      <div style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid oklch(0.89 0.008 75)"><div style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--accent-deep);padding-top:3px">YES</div><p style="margin:0;font-size:16px;line-height:1.55;color:oklch(0.32 0.012 75)">Can I <strong>start from something that already exists</strong> rather than a blank page?</p></div>
+      <div style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid oklch(0.89 0.008 75)"><div style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--accent-deep);padding-top:3px">YES</div><p style="margin:0;font-size:16px;line-height:1.55;color:oklch(0.32 0.012 75)">Can I see <strong>why</strong> it flagged a gap?</p></div>
+      <div style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid oklch(0.89 0.008 75)"><div style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--accent-deep);padding-top:3px">YES</div><p style="margin:0;font-size:16px;line-height:1.55;color:oklch(0.32 0.012 75)">Can I get the <strong>follow-up questions written for me</strong>, tied to the actual gaps?</p></div>
+      <div style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid oklch(0.89 0.008 75)"><div style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--accent-deep);padding-top:3px">YES</div><p style="margin:0;font-size:16px;line-height:1.55;color:oklch(0.32 0.012 75)">Can I tell <strong>which parts are the client's words</strong> and which are assumptions?</p></div>
+      <div style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid oklch(0.89 0.008 75)"><div style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--accent-deep);padding-top:3px">YES</div><p style="margin:0;font-size:16px;line-height:1.55;color:oklch(0.32 0.012 75)">Can I find out whether this should be <strong>fixed price or something looser</strong>?</p></div>
+      <div style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid oklch(0.89 0.008 75)"><div style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--accent-deep);padding-top:3px">YES</div><p style="margin:0;font-size:16px;line-height:1.55;color:oklch(0.32 0.012 75)">Will it tell me when an inquiry is <strong>outside what we actually do</strong>?</p></div>
+      <div style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid oklch(0.89 0.008 75)"><div style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--accent-deep);padding-top:3px">YES</div><p style="margin:0;font-size:16px;line-height:1.55;color:oklch(0.32 0.012 75)">Can my whole team <strong>apply the same standard</strong> without me in the room?</p></div>
+    </div>
+
+    <div style="margin-top:64px;border-left:2px solid oklch(0.24 0.012 75);padding-left:26px;max-width:62ch">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:oklch(0.52 0.012 75);margin-bottom:14px">Three things it doesn't do</div>
+      <p style="margin:0;font-size:16px;line-height:1.65;color:oklch(0.34 0.012 75)">It doesn't write your proposal. It doesn't produce your estimate, because your delivery team should own that number. And it doesn't replace their review. It makes that review start from a brief worth reviewing.</p>
+    </div>
+  </div>
+
+  <!-- PRICING -->
+  <div id="pricing" data-screen-label="Pricing" style="max-width:1160px;margin:0 auto;padding:120px 56px 0">
+    <div style="border-top:2px solid oklch(0.24 0.012 75);padding-top:14px;margin-bottom:40px;display:flex;align-items:baseline;gap:18px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;font-weight:700">08</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:oklch(0.52 0.012 75)">Pricing</div>
+    </div>
+    <h2 style="font-size:clamp(28px,3.2vw,38px);font-weight:700;letter-spacing:-0.02em;margin:0 0 20px">One price. Everyone in your firm.</h2>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:1px;background:oklch(0.87 0.010 75);border:1px solid oklch(0.87 0.010 75);margin:48px 0 40px">
+      <div style="background:oklch(0.99 0.006 75);padding:38px 36px 40px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:oklch(0.52 0.012 75);margin-bottom:20px">Free</div>
+        <div style="font-size:44px;font-weight:700;letter-spacing:-0.03em;margin-bottom:20px">$0</div>
+        <p style="font-size:15px;line-height:1.65;color:oklch(0.34 0.012 75);margin:0 0 28px">One user, three open opportunities at a time. Everything works: your own rubrics, as many rounds as a pursuit takes, the follow-up questions, the drafted email. Close one out and the slot comes back.</p>
+        <a href="#waitlist" style="border:1px solid oklch(0.24 0.012 75);color:oklch(0.24 0.012 75);padding:11px 20px;font-size:14px;font-weight:600;border-radius:2px;display:inline-block;text-decoration:none" style-hover="background:oklch(0.90 0.008 75);color:oklch(0.24 0.012 75)">Join the waitlist</a>
+      </div>
+      <div style="background:oklch(0.24 0.012 75);color:oklch(0.94 0.008 75);padding:38px 36px 40px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:20px">Firm</div>
+        <div style="font-size:44px;font-weight:700;letter-spacing:-0.03em;margin-bottom:20px">$149<span style="font-size:18px;font-weight:400;color:oklch(0.70 0.012 75)">/month, or $1,490 a year</span></div>
+        <p style="font-size:15px;line-height:1.65;color:oklch(0.82 0.008 75);margin:0 0 28px">No limit on open opportunities. Everyone in the firm, no seat counting. Shared rubrics, so the standard is actually shared. Every inquiry you've scored kept in one place, and the view across all of them: where briefs consistently arrive thin, and what clients keep asking for that you don't sell.</p>
+        <a href="#waitlist" style="background:var(--accent);color:oklch(0.20 0.03 75);padding:12px 21px;font-size:14px;font-weight:600;border-radius:2px;display:inline-block;text-decoration:none" style-hover="filter:brightness(1.06);color:oklch(0.20 0.03 75)">Put the firm on it</a>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:44px">
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:oklch(0.52 0.012 75);margin-bottom:10px">What counts as an opportunity</div>
+        <p style="margin:0;font-size:14px;line-height:1.65;color:oklch(0.38 0.012 75)">An opportunity is one pursuit, not one document. The original inquiry, the client's answers, their answers to your follow-up on those answers. It stays one opportunity, and watching the gaps close is the point.</p>
+      </div>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:oklch(0.52 0.012 75);margin-bottom:10px">Why no per-seat pricing</div>
+        <p style="margin:0;font-size:14px;line-height:1.65;color:oklch(0.38 0.012 75)">No per-seat pricing, and not because we're generous. If a sales exec has to justify a seat, they'll forward the inquiry to whoever already has one, and you're back to a standard nobody follows.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- WAITLIST -->
+  <div id="waitlist" data-screen-label="Waitlist" style="background:oklch(0.24 0.012 75);color:oklch(0.94 0.008 75);margin-top:130px">
+    <div style="max-width:1160px;margin:0 auto;padding:96px 56px 100px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:72px;align-items:center">
+        <div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:22px">The waitlist</div>
+          <h2 style="font-family:Spectral,Georgia,serif;font-weight:400;font-size:clamp(30px,3.8vw,44px);line-height:1.1;letter-spacing:-0.025em;margin:0 0 24px;color:oklch(0.96 0.008 75)">The first round is small.</h2>
+          <p style="font-size:17px;line-height:1.6;color:oklch(0.80 0.008 75);margin:0;max-width:46ch">I'm looking for people who run firms or sell for them, review real inquiries, and will tell me where this breaks.</p>
+        </div>
+        <div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <input type="email" placeholder="you@yourfirm.com" style="flex:1;min-width:220px;background:oklch(0.30 0.012 75);border:1px solid oklch(0.42 0.012 75);color:oklch(0.94 0.008 75);padding:13px 16px;font-size:15px;font-family:'Libre Franklin',system-ui,sans-serif;border-radius:2px;outline:none">
+            <div style="background:var(--accent);color:oklch(0.20 0.03 75);padding:13px 24px;font-size:15px;font-weight:600;border-radius:2px;cursor:pointer;white-space:nowrap" style-hover="filter:brightness(1.06)">Join the waitlist</div>
+          </div>
+          <p style="font-family:Spectral,Georgia,serif;font-style:italic;font-size:15px;line-height:1.6;color:oklch(0.66 0.012 75);margin:16px 0 0">One email from me, written by me. No drip sequence.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="background:oklch(0.24 0.012 75);border-top:1px solid oklch(0.34 0.012 75)">
+    <div style="max-width:1160px;margin:0 auto;padding:26px 56px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap">
+      <div style="display:flex;align-items:center;gap:10px">
+        <div style="display:flex;width:20px;height:20px;gap:2px"><div style="flex:0 0 60%;background:oklch(0.94 0.008 75)"></div><div style="flex:1;background:var(--accent)"></div></div>
+        <div style="font-weight:700;font-size:15px;letter-spacing:-0.025em;color:oklch(0.94 0.008 75)">FirmGround</div>
+      </div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:oklch(0.60 0.012 75)">Most projects fail before they even start</div>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#C98F1E&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#C98F1E&quot;,&quot;#B14A31&quot;,&quot;#3C6A55&quot;,&quot;#3A5C86&quot;],&quot;section&quot;:&quot;Identity&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() { this.sync(); }
+  componentDidUpdate() { this.sync(); }
+  sync() {
+    const a = this.props.accent;
+    if (!a) return;
+    const r = document.documentElement;
+    r.style.setProperty('--accent', a);
+    r.style.setProperty('--accent-deep', 'color-mix(in oklab, ' + a + ', oklch(0.22 0.02 70) 46%)');
+  }
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

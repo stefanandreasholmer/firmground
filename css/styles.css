@@ -1,0 +1,493 @@
+/* ====================================================================
+   FirmGround — Landing page styles
+
+   The palette is defined once as custom properties (variables) below,
+   then referenced everywhere. Change a value here and it updates across
+   the whole page. Colors use the OKLCH color space:
+   oklch(Lightness Chroma Hue) — lower L = darker, higher C = more vivid.
+==================================================================== */
+
+:root {
+  /* Brand accent (the ochre/gold). Swap these two to re-tint the site. */
+  --accent:       oklch(0.72 0.155 78);
+  --accent-deep:  oklch(0.52 0.125 70);
+
+  /* Surfaces */
+  --bg:           oklch(0.96 0.008 75);   /* page background          */
+  --surface-soft: oklch(0.99 0.006 75);   /* raised panels (story/free) */
+  --surface-card: oklch(0.945 0.010 75);  /* note card background      */
+
+  /* Ink — dark to light text tones */
+  --ink:          oklch(0.24 0.012 75);   /* headings, strongest text  */
+  --ink-800:      oklch(0.28 0.012 75);
+  --ink-700:      oklch(0.32 0.012 75);
+  --ink-600:      oklch(0.34 0.012 75);   /* body copy                 */
+  --ink-500:      oklch(0.36 0.012 75);
+  --ink-400:      oklch(0.40 0.012 75);
+  --ink-300:      oklch(0.46 0.012 75);
+  --ink-200:      oklch(0.52 0.012 75);   /* muted labels / captions   */
+
+  /* On-dark text (used on the footer and featured pricing card) */
+  --on-dark:      oklch(0.96 0.008 75);
+  --on-dark-soft: oklch(0.82 0.008 75);
+  --on-dark-mute: oklch(0.70 0.012 75);
+  --on-dark-faint:oklch(0.60 0.012 75);
+
+  /* Lines */
+  --border:       oklch(0.87 0.010 75);
+  --border-strong:oklch(0.80 0.012 75);
+
+  /* Layout */
+  --page-max:     1160px;
+  --page-pad:     56px;
+  --radius:       2px;
+
+  /* Type */
+  --font-sans:  'Libre Franklin', system-ui, sans-serif;
+  --font-serif: 'Spectral', Georgia, serif;
+  --font-mono:  'JetBrains Mono', monospace;
+}
+
+/* ---- Base -------------------------------------------------------- */
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: oklch(0.88 0.09 85); }
+
+a {
+  color: var(--accent-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+a:hover { color: var(--ink); }
+
+img { max-width: 100%; }
+
+/* Shared layout wrapper */
+.container {
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding-left: var(--page-pad);
+  padding-right: var(--page-pad);
+}
+
+/* ---- Reusable bits ---------------------------------------------- */
+
+/* Small uppercase mono label */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-200);
+}
+.eyebrow--accent { color: var(--accent-deep); }
+
+/* Mono caption under an image */
+.caption {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-200);
+  text-align: center;
+  margin-top: 12px;
+}
+
+/* Section heading (serif) */
+.section-title {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(30px, 3.6vw, 42px);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  margin: 0 0 48px;
+}
+
+/* Framed product screenshot */
+.screenshot {
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  overflow: hidden;
+  font-size: 0;
+  box-shadow: 0 18px 40px -18px oklch(0.24 0.012 75 / 0.28);
+}
+.screenshot img { width: 100%; display: block; }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: var(--radius);
+  padding: 14px 28px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background 0.15s ease, filter 0.15s ease, color 0.15s ease;
+}
+.btn--sm { font-size: 14px; padding: 11px 20px; }
+
+.btn--dark {
+  background: var(--ink);
+  color: var(--on-dark);
+}
+.btn--dark:hover { background: oklch(0.32 0.012 75); color: var(--on-dark); }
+
+.btn--outline {
+  border-color: var(--ink);
+  color: var(--ink);
+  background: transparent;
+}
+.btn--outline:hover { background: oklch(0.90 0.008 75); color: var(--ink); }
+
+.btn--accent {
+  background: var(--accent);
+  color: oklch(0.20 0.03 75);
+}
+.btn--accent:hover { filter: brightness(1.06); color: oklch(0.20 0.03 75); }
+
+/* Horizontal divider */
+.rule {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 110px 0 0;
+}
+
+/* ---- Brand mark -------------------------------------------------- */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  text-decoration: none;
+}
+.brand__mark {
+  display: flex;
+  width: 28px;
+  height: 28px;
+  gap: 2px;
+}
+.brand__mark-dark   { flex: 0 0 60%; background: var(--ink); }
+.brand__mark-light  { flex: 0 0 60%; background: oklch(0.94 0.008 75); }
+.brand__mark-accent { flex: 1; background: var(--accent); }
+.brand__name {
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+}
+
+/* ---- Masthead ---------------------------------------------------- */
+
+.masthead__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  border-bottom: 1px solid var(--border);
+}
+.masthead__nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.nav-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink-700);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.nav-link:hover { color: var(--ink); }
+
+/* ---- Hero -------------------------------------------------------- */
+
+.hero { padding-top: 88px; padding-bottom: 110px; }
+
+.hero__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 64px;
+  align-items: center;
+}
+.hero__copy   { flex: 1 1 480px; min-width: 0; }
+.hero__figure { flex: 1 1 400px; min-width: 0; margin: 0; display: flex; flex-direction: column; }
+
+/* The hero's eyebrow is a touch larger than the default */
+.hero .eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  margin-bottom: 22px;
+}
+
+.hero__headline {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(40px, 4.8vw, 62px);
+  line-height: 1.02;
+  letter-spacing: -0.028em;
+  margin: 0 0 26px;
+  text-wrap: balance;
+}
+.hero__lede {
+  font-size: 19px;
+  line-height: 1.55;
+  color: var(--ink-500);
+  margin: 0 0 26px;
+  max-width: 48ch;
+  text-wrap: pretty;
+}
+.hero__tagline {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--ink-800);
+  margin: 0 0 36px;
+}
+.hero__cta {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.hero__cta-note { font-size: 14px; color: var(--ink-300); }
+
+/* ---- Founder story ----------------------------------------------- */
+
+.story {
+  background: var(--surface-soft);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.story__inner { padding-top: 100px; padding-bottom: 100px; }
+
+/* The readable column is narrower than the full container */
+.story__title,
+.story__body,
+.story__kicker,
+.signature,
+.note-card { max-width: 680px; margin-left: auto; margin-right: auto; }
+
+.story__title {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(30px, 3.6vw, 42px);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  margin: 0 auto 36px;
+}
+.story__body {
+  font-family: var(--font-serif);
+  font-size: 19px;
+  line-height: 1.65;
+  color: var(--ink-800);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.story__body p { margin: 0; }
+.story__kicker {
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 32px auto 0;
+}
+
+.signature {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 36px;
+}
+.signature__avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  border: 1px solid var(--border);
+}
+.signature__name {
+  font-family: var(--font-serif);
+  font-size: 21px;
+  font-style: italic;
+}
+.signature__role {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-200);
+  margin-top: 4px;
+}
+
+.note-card {
+  margin-top: 44px;
+  background: var(--surface-card);
+  border: 1px solid oklch(0.88 0.010 75);
+  padding: 24px 28px;
+  border-radius: var(--radius);
+}
+.note-card .eyebrow { margin-bottom: 12px; }
+.note-card p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink-700);
+}
+
+/* ---- Three steps ------------------------------------------------- */
+
+.steps { padding-top: 110px; }
+
+.tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid var(--ink);
+  margin-bottom: 56px;
+}
+.tab {
+  font-family: var(--font-sans);
+  padding: 12px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink-400);
+  background: transparent;
+  border: 0;
+  border-radius: var(--radius) var(--radius) 0 0;
+  cursor: pointer;
+}
+.tab:hover { opacity: 0.85; }
+.tab.is-active {
+  background: var(--ink);
+  color: var(--on-dark);
+  font-weight: 700;
+}
+
+.steps__panel {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+.steps__panel.is-hidden { display: none; }
+
+.step {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 56px;
+  align-items: center;
+}
+.step--reverse { flex-direction: row-reverse; }
+
+.step__copy   { flex: 1 1 380px; min-width: 0; }
+.step__figure { flex: 1 1 420px; min-width: 0; }
+
+.step__num {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent-deep);
+  margin-bottom: 14px;
+}
+.step__title {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin: 0 0 14px;
+}
+.step__text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ink-600);
+}
+
+/* ---- Pricing ----------------------------------------------------- */
+
+.pricing { padding-top: 100px; padding-bottom: 120px; }
+
+.plans {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;                 /* the gap shows the border color through */
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+.plan {
+  flex: 1 1 340px;
+  background: var(--surface-soft);
+  padding: 38px 36px 40px;
+}
+.plan .eyebrow { margin-bottom: 20px; }
+.plan__price {
+  font-size: 44px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+}
+.plan__desc {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink-600);
+  margin: 0 0 28px;
+}
+
+.plan--featured {
+  background: var(--ink);
+  color: var(--on-dark-soft);
+}
+.plan--featured .plan__price { color: var(--on-dark); }
+.plan--featured .plan__desc { color: var(--on-dark-soft); }
+.plan__price-note {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--on-dark-mute);
+}
+
+/* ---- Footer ------------------------------------------------------ */
+
+.footer { background: var(--ink); }
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+.brand--footer .brand__name { color: oklch(0.94 0.008 75); }
+.brand--footer .brand__mark { width: 20px; height: 20px; }
+.footer .eyebrow { color: var(--on-dark-faint); }
+
+/* ---- Small screens ----------------------------------------------- */
+
+@media (max-width: 720px) {
+  :root { --page-pad: 24px; }
+
+  .masthead__nav { gap: 16px; }
+  .hero { padding-top: 56px; padding-bottom: 72px; }
+  .hero__grid { gap: 40px; }
+  .story__inner { padding-top: 64px; padding-bottom: 64px; }
+  .steps { padding-top: 72px; }
+  .pricing { padding-top: 64px; padding-bottom: 80px; }
+
+  /* Keep alternating steps stacking image-below-copy consistently */
+  .step, .step--reverse { flex-direction: column; }
+}

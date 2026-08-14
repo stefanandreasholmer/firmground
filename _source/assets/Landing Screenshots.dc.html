@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,300..800;1,400..700&family=Spectral:ital,wght@0,300;0,400;0,600;1,400;1,600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  html, body { margin:0; padding:0; background: oklch(0.93 0.010 75); }
+  * { box-sizing: border-box; }
+  a { color: oklch(0.52 0.125 70); text-decoration: underline; text-underline-offset: 3px; }
+  a:hover { color: oklch(0.24 0.012 75); }
+  ::selection { background: oklch(0.88 0.09 85); }
+</style>
+</helmet>
+
+<div style="background:oklch(0.93 0.010 75);color:oklch(0.24 0.012 75);font-family:'Libre Franklin',system-ui,sans-serif;padding:56px 64px 120px;-webkit-font-smoothing:antialiased;width:max-content;">
+
+  <div style="max-width:980px;margin-bottom:48px;">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:oklch(0.52 0.125 70);margin-bottom:10px;">FirmGround · landing page screenshots · six slots</div>
+    <div style="font-family:Spectral,Georgia,serif;font-size:34px;letter-spacing:-0.02em;line-height:1.1;">Product screens for the landing page, built to be cropped.</div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:64px;">
+
+    <!-- ══ ROW: sales-tab slots (upload / score / questions) ══ -->
+    <div style="display:flex;gap:44px;align-items:flex-start;width:max-content;">
+
+      <!-- SHOT 1 · UPLOAD -->
+      <div id="shot-upload" style="width:1080px;">
+        <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:10px;">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:oklch(0.52 0.125 70);">S1</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:oklch(0.52 0.012 75);">Upload — mixed files, one inquiry</span>
+        </div>
+        <div data-screen-label="S1 Upload" style="background:oklch(0.99 0.006 75);border:1px solid oklch(0.84 0.012 75);border-radius:2px;box-shadow:0 24px 60px -30px oklch(0.24 0.012 75 / 0.35);height:680px;display:flex;flex-direction:column;overflow:hidden;">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 28px;border-bottom:1px solid oklch(0.90 0.008 75);">
+            <div style="display:flex;align-items:center;gap:32px;">
+              <div style="display:flex;align-items:center;gap:10px;"><div style="display:flex;width:20px;height:20px;gap:2px;"><div style="flex:0 0 60%;background:oklch(0.24 0.012 75);"></div><div style="flex:1;background:oklch(0.72 0.155 78);"></div></div><div style="font-weight:700;font-size:15px;letter-spacing:-0.025em;">FirmGround</div></div>
+              <div style="display:flex;gap:20px;font-size:13.5px;">
+                <div style="font-weight:700;border-bottom:2px solid oklch(0.24 0.012 75);padding-bottom:2px;">Submissions</div>
+                <div style="color:oklch(0.50 0.012 75);">Rubrics</div>
+                <div style="color:oklch(0.50 0.012 75);">Firm settings</div>
+              </div>
+            </div>
+            <div style="width:30px;height:30px;border-radius:50%;background:oklch(0.90 0.055 85);border:1px solid oklch(0.80 0.06 85);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:oklch(0.42 0.09 75);">AH</div>
+          </div>
+          <div style="padding:30px 34px 36px;flex:1;min-height:0;display:flex;flex-direction:column;">
+            <div style="font-size:24px;font-weight:700;letter-spacing:-0.02em;margin-bottom:4px;">New submission</div>
+            <div style="font-size:14px;color:oklch(0.42 0.012 75);margin-bottom:22px;">Drop in whatever the client sent — it's read as one inquiry, not file by file.</div>
+            <div style="border:2px dashed oklch(0.72 0.155 78);background:oklch(0.965 0.014 85);padding:24px;border-radius:2px;margin-bottom:16px;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
+              <div style="font-size:16px;font-weight:700;margin-bottom:4px;">Drop files here</div>
+              <div style="font-size:13.5px;color:oklch(0.48 0.012 75);">PDF, Word, spreadsheets, images — or paste text</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:20px;">
+              <div style="display:flex;align-items:center;gap:14px;border:1px solid oklch(0.87 0.010 75);background:oklch(1 0 0);padding:12px 16px;border-radius:2px;">
+                <div style="flex:none;width:40px;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.08em;font-weight:700;color:oklch(0.98 0.008 75);background:oklch(0.48 0.13 30);text-align:center;padding:4px 0;border-radius:2px;">PDF</div>
+                <div style="flex:1;font-size:14.5px;font-weight:600;">Anthem_Logistics_RFP_final_v3_FINAL.pdf</div>
+                <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:oklch(0.52 0.012 75);">38 pages</div>
+                <div style="width:120px;height:5px;background:oklch(0.92 0.008 75);border-radius:99px;overflow:hidden;"><div style="width:100%;height:100%;background:oklch(0.24 0.012 75);"></div></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:14px;border:1px solid oklch(0.87 0.010 75);background:oklch(1 0 0);padding:12px 16px;border-radius:2px;">
+                <div style="flex:none;width:40px;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.08em;font-weight:700;color:oklch(0.98 0.008 75);background:oklch(0.50 0.11 150);text-align:center;padding:4px 0;border-radius:2px;">XLS</div>
+                <div style="flex:1;font-size:14.5px;font-weight:600;">Budget breakdown FY26.xlsx</div>
+                <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:oklch(0.52 0.012 75);">3 sheets</div>
+                <div style="width:120px;height:5px;background:oklch(0.92 0.008 75);border-radius:99px;overflow:hidden;"><div style="width:100%;height:100%;background:oklch(0.24 0.012 75);"></div></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:14px;border:1px solid oklch(0.87 0.010 75);background:oklch(1 0 0);padding:12px 16px;border-radius:2px;">
+                <div style="flex:none;width:40px;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.08em;font-weight:700;color:oklch(0.98 0.008 75);background:oklch(0.55 0.09 250);text-align:center;padding:4px 0;border-radius:2px;">PNG</div>
+                <div style="flex:1;font-size:14.5px;font-weight:600;">whiteboard-systems-map.png</div>
+                <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:oklch(0.52 0.012 75);">photo</div>
+                <div style="width:120px;height:5px;background:oklch(0.92 0.008 75);border-radius:99px;overflow:hidden;"><div style="width:72%;height:100%;background:oklch(0.72 0.155 78);"></div></div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:16px;">
+              <div style="background:oklch(0.24 0.012 75);color:oklch(0.96 0.008 75);padding:13px 26px;font-size:15px;font-weight:600;border-radius:2px;">Analyse this</div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:oklch(0.52 0.012 75);">No sorting, no forms — FirmGround works out what kind of work this is</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SHOT 2 · SCORECARD OVERVIEW -->
+      <div id="shot-scorecard" style="width:1080px;">
+        <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:10px;">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:oklch(0.52 0.125 70);">S2</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:oklch(0.52 0.012 75);">Scorecard overview — the line graph, criteria underneath</span>
+        </div>
+        <div data-screen-label="S2 Scorecard overview" style="background:oklch(0.99 0.006 75);border:1px solid oklch(0.84 0.012 75);border-radius:2px;box-shadow:0 24px 60px -30px oklch(0.24 0.012 75 / 0.35);height:680px;display:flex;flex-direction:column;overflow:hidden;">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 28px;border-bottom:1px solid oklch(0.90 0.008 75);">
+            <div style="display:flex;align-items:center;gap:32px;">
+              <div style="display:flex;align-items:center;gap:10px;"><div style="display:flex;width:20px;height:20px;gap:2px;"><div style="flex:0 0 60%;background:oklch(0.24 0.012 75);"></div><div style="flex:1;background:oklch(0.72 0.155 78);"></div></div><div style="font-weight:700;font-size:15px;letter-spacing:-0.025em;">FirmGround</div></div>
+              <div style="display:flex;gap:20px;font-size:13.5px;">
+                <div style="font-weight:700;border-bottom:2px solid oklch(0.24 0.012 75);padding-bottom:2px;">Submissions</div>
+                <div style="color:oklch(0.50 0.012 75);">Rubrics</div>
+                <div style="color:oklch(0.50 0.012 75);">Firm settings</div>
+              </div>
+            </div>
+            <div style="width:30px;height:30px;border-radius:50%;background:oklch(0.90 0.055 85);border:1px solid oklch(0.80 0.06 85);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:oklch(0.42 0.09 75);">AH</div>
+          </div>
+          <div style="padding:26px 34px 34px;">
+            <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:20px;gap:24px;">
+              <div>
+                <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:oklch(0.52 0.012 75);margin-bottom:6px;">Opportunity · SaaS platform · 3 rounds</div>
+                <div style="font-size:24px;font-weight:700;letter-spacing:-0.02em;">Anthem Logistics</div>
+              </div>
+              <div style="text-align:right;flex:none;">
+                <div style="font-size:19px;font-weight:700;letter-spacing:-0.015em;">Fixed price is defensible</div>
+                <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:oklch(0.52 0.012 75);margin-top:6px;">80% complete · every criterion at 70+</div>
+              </div>
+            </div>
+            <div style="border:1px solid oklch(0.90 0.008 75);padding:14px 18px 6px;margin-bottom:14px;">
+              <svg viewBox="0 0 940 250" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;height:auto;">
+                <line x1="60" y1="22" x2="920" y2="22" stroke="oklch(0.91 0.008 75)" stroke-width="1"></line>
+                <line x1="60" y1="112" x2="920" y2="112" stroke="oklch(0.91 0.008 75)" stroke-width="1"></line>
+                <line x1="60" y1="202" x2="920" y2="202" stroke="oklch(0.74 0.012 75)" stroke-width="1"></line>
+                <text x="48" y="26" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.52 0.012 75)">100</text>
+                <text x="48" y="116" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.52 0.012 75)">50</text>
+                <text x="48" y="206" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.52 0.012 75)">0</text>
+                <polyline points="170,121 490,85 810,58" fill="none" stroke="oklch(0.24 0.012 75)" stroke-width="2.5"></polyline>
+                <circle cx="170" cy="121" r="6" fill="oklch(0.99 0.006 75)" stroke="oklch(0.24 0.012 75)" stroke-width="2.5"></circle>
+                <circle cx="490" cy="85" r="6" fill="oklch(0.99 0.006 75)" stroke="oklch(0.24 0.012 75)" stroke-width="2.5"></circle>
+                <circle cx="810" cy="58" r="7" fill="oklch(0.72 0.155 78)" stroke="oklch(0.24 0.012 75)" stroke-width="2.5"></circle>
+                <text x="170" y="101" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="19" font-weight="700" fill="oklch(0.24 0.012 75)">45</text>
+                <text x="490" y="65" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="19" font-weight="700" fill="oklch(0.24 0.012 75)">65</text>
+                <text x="810" y="37" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="20" font-weight="700" fill="oklch(0.24 0.012 75)">80</text>
+                <text x="170" y="152" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="1" fill="oklch(0.48 0.13 30)">DISCOVERY FIRST</text>
+                <text x="490" y="116" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="1" fill="oklch(0.40 0.012 75)">T&amp;M SUPPORTED</text>
+                <text x="810" y="89" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="1" fill="oklch(0.52 0.125 70)">FIXED PRICE SUPPORTED</text>
+                <text x="170" y="226" text-anchor="middle" font-family="Libre Franklin, sans-serif" font-size="12.5" font-weight="700" fill="oklch(0.24 0.012 75)">Round 1 · the inquiry</text>
+                <text x="490" y="226" text-anchor="middle" font-family="Libre Franklin, sans-serif" font-size="12.5" font-weight="700" fill="oklch(0.24 0.012 75)">Round 2 · their answers</text>
+                <text x="810" y="226" text-anchor="middle" font-family="Libre Franklin, sans-serif" font-size="12.5" font-weight="700" fill="oklch(0.24 0.012 75)">Round 3 · integration spec</text>
+              </svg>
+            </div>
+            <div style="display:grid;grid-template-columns:200px 1fr 130px;gap:16px;align-items:center;padding:10px 0;border-bottom:1px solid oklch(0.93 0.008 75);">
+              <div style="font-size:14px;font-weight:600;">Problem / Rationale</div>
+              <div style="display:flex;align-items:center;gap:12px;"><div style="flex:1;height:8px;background:oklch(0.93 0.008 75);"><div style="width:100%;height:8px;background:oklch(0.24 0.012 75);"></div></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:oklch(0.45 0.012 75);width:38px;text-align:right;">100%</div></div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.06em;text-transform:uppercase;color:oklch(0.24 0.012 75);text-align:right;">Client-stated</div>
+            </div>
+            <div style="display:grid;grid-template-columns:200px 1fr 130px;gap:16px;align-items:center;padding:10px 0;border-bottom:1px solid oklch(0.93 0.008 75);">
+              <div style="font-size:14px;font-weight:600;">Success Metrics</div>
+              <div style="display:flex;align-items:center;gap:12px;"><div style="flex:1;height:8px;background:oklch(0.93 0.008 75);"><div style="width:70%;height:8px;background:oklch(0.24 0.012 75);"></div></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:oklch(0.45 0.012 75);width:38px;text-align:right;">70%</div></div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.06em;text-transform:uppercase;color:oklch(0.24 0.012 75);text-align:right;">Client-stated</div>
+            </div>
+            <div style="display:grid;grid-template-columns:200px 1fr 130px;gap:16px;align-items:center;padding:10px 0;border-bottom:1px solid oklch(0.93 0.008 75);">
+              <div style="font-size:14px;font-weight:600;">Technology Stack</div>
+              <div style="display:flex;align-items:center;gap:12px;"><div style="flex:1;height:8px;background:oklch(0.93 0.008 75);"><div style="width:70%;height:8px;background:oklch(0.24 0.012 75);"></div></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:oklch(0.45 0.012 75);width:38px;text-align:right;">70%</div></div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.06em;text-transform:uppercase;color:oklch(0.24 0.012 75);text-align:right;">Client-stated</div>
+            </div>
+            <div style="display:grid;grid-template-columns:200px 1fr 130px;gap:16px;align-items:center;padding:10px 0;border-bottom:1px solid oklch(0.93 0.008 75);">
+              <div style="font-size:14px;font-weight:600;">Team &amp; Methodology</div>
+              <div style="display:flex;align-items:center;gap:12px;"><div style="flex:1;height:8px;background:oklch(0.93 0.008 75);"><div style="width:70%;height:8px;background:oklch(0.72 0.155 78);"></div></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:oklch(0.45 0.012 75);width:38px;text-align:right;">70%</div></div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.06em;text-transform:uppercase;color:oklch(0.52 0.125 70);text-align:right;">Firm-provided</div>
+            </div>
+            <div style="display:grid;grid-template-columns:200px 1fr 130px;gap:16px;align-items:center;padding:10px 0;">
+              <div style="font-size:14px;font-weight:600;">Committee weighting</div>
+              <div style="display:flex;align-items:center;gap:12px;"><div style="flex:1;height:8px;background:oklch(0.93 0.008 75);"><div style="width:70%;height:8px;background:oklch(0.58 0.075 250);"></div></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:oklch(0.45 0.012 75);width:38px;text-align:right;">70%</div></div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.06em;text-transform:uppercase;color:oklch(0.58 0.075 250);text-align:right;">Assumed</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SHOT 3 · FOLLOW-UP QUESTIONS -->
+      <div id="shot-questions" style="width:1080px;">
+        <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:10px;">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:oklch(0.52 0.125 70);">S3</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:oklch(0.52 0.012 75);">Follow-up questions — copy one, or copy the email</span>
+        </div>
+        <div data-screen-label="S3 Follow-up questions" style="background:oklch(0.99 0.006 75);border:1px solid oklch(0.84 0.012 75);border-radius:2px;box-shadow:0 24px 60px -30px oklch(0.24 0.012 75 / 0.35);height:680px;display:flex;flex-direction:column;overflow:hidden;">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 28px;border-bottom:1px solid oklch(0.90 0.008 75);">
+            <div style="display:flex;align-items:center;gap:32px;">
+              <div style="display:flex;align-items:center;gap:10px;"><div style="display:flex;width:20px;height:20px;gap:2px;"><div style="flex:0 0 60%;background:oklch(0.24 0.012 75);"></div><div style="flex:1;background:oklch(0.72 0.155 78);"></div></div><div style="font-weight:700;font-size:15px;letter-spacing:-0.025em;">FirmGround</div></div>
+              <div style="display:flex;gap:20px;font-size:13.5px;">
+                <div style="font-weight:700;border-bottom:2px solid oklch(0.24 0.012 75);padding-bottom:2px;">Submissions</div>
+                <div style="color:oklch(0.50 0.012 75);">Rubrics</div>
+                <div style="color:oklch(0.50 0.012 75);">Firm settings</div>
+              </div>
+            </div>
+            <div style="width:30px;height:30px;border-radius:50%;background:oklch(0.90 0.055 85);border:1px solid oklch(0.80 0.06 85);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:oklch(0.42 0.09 75);">AH</div>
+          </div>
+          <div style="padding:26px 34px 34px;flex:1;min-height:0;display:flex;flex-direction:column;">
+            <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:4px;gap:20px;">
+              <div style="font-size:24px;font-weight:700;letter-spacing:-0.02em;">Follow-up questions</div>
+              <div style="flex:none;background:oklch(0.24 0.012 75);color:oklch(0.96 0.008 75);padding:11px 20px;font-size:14px;font-weight:600;border-radius:2px;white-space:nowrap;">Copy all as email</div>
+            </div>
+            <div style="font-size:14px;color:oklch(0.42 0.012 75);margin-bottom:22px;">Each question is tied to a gap. Copy it for the client, answer it yourself, or let FirmGround assume — assumptions are marked and never move the score.</div>
+            <div style="font-size:12px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:oklch(0.52 0.012 75);margin-bottom:8px;">Technology Stack · 0%</div>
+            <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:20px;">
+              <div style="display:flex;align-items:center;gap:16px;border:1px solid oklch(0.87 0.010 75);background:oklch(1 0 0);padding:13px 16px;border-radius:2px;">
+                <div style="flex:1;font-family:Spectral,Georgia,serif;font-size:16px;line-height:1.45;">Which systems must the portal integrate with, and who maintains each one?</div>
+                <div style="flex:none;display:flex;gap:6px;align-items:center;">
+                  <div style="border:1px solid oklch(0.24 0.012 75);padding:7px 12px;font-size:12px;font-weight:600;border-radius:2px;white-space:nowrap;">Copy</div>
+                  <div style="border:1px solid oklch(0.82 0.012 75);color:oklch(0.38 0.012 75);padding:7px 12px;font-size:12px;font-weight:600;border-radius:2px;white-space:nowrap;">Answer</div>
+                  <div style="border:1px solid oklch(0.58 0.075 250);color:oklch(0.42 0.06 250);background:oklch(0.93 0.02 250);padding:7px 12px;font-size:12px;font-weight:600;border-radius:2px;white-space:nowrap;">Assume</div>
+                </div>
+              </div>
+              <div style="display:flex;align-items:center;gap:16px;border:1px solid oklch(0.87 0.010 75);background:oklch(1 0 0);padding:13px 16px;border-radius:2px;">
+                <div style="flex:1;font-family:Spectral,Georgia,serif;font-size:16px;line-height:1.45;">Is the claims database's API documented, and can our team get read access during scoping?</div>
+                <div style="flex:none;display:flex;gap:6px;align-items:center;">
+                  <div style="border:1px solid oklch(0.24 0.012 75);padding:7px 12px;font-size:12px;font-weight:600;border-radius:2px;white-space:nowrap;">Copy</div>
+                  <div style="border:1px solid oklch(0.82 0.012 75);color:oklch(0.38 0.012 75);padding:7px 12px;font-size:12px;font-weight:600;border-radius:2px;white-space:nowrap;">Answer</div>
+                  <div style="border:1px solid oklch(0.58 0.075 250);color:oklch(0.42 0.06 250);background:oklch(0.93 0.02 250);padding:7px 12px;font-size:12px;font-weight:600;border-radius:2px;white-space:nowrap;">Assume</div>
+                </div>
+              </div>
+            </div>
+            <div style="font-size:12px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:oklch(0.52 0.012 75);margin-bottom:8px;">Success Metrics · 30%</div>
+            <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:20px;">
+              <div style="display:flex;align-items:center;gap:16px;border:1px solid oklch(0.87 0.010 75);background:oklch(1 0 0);padding:13px 16px;border-radius:2px;">
+                <div style="flex:1;font-family:Spectral,Georgia,serif;font-size:16px;line-height:1.45;">What quantitative target would make this a success, and who measures it?</div>
+                <div style="flex:none;display:flex;gap:6px;align-items:center;">
+                  <div style="border:1px solid oklch(0.24 0.012 75);padding:7px 12px;font-size:12px;font-weight:600;border-radius:2px;white-space:nowrap;">Copy</div>
+                  <div style="border:1px solid oklch(0.82 0.012 75);color:oklch(0.38 0.012 75);padding:7px 12px;font-size:12px;font-weight:600;border-radius:2px;white-space:nowrap;">Answer</div>
+                  <div style="border:1px solid oklch(0.58 0.075 250);color:oklch(0.42 0.06 250);background:oklch(0.93 0.02 250);padding:7px 12px;font-size:12px;font-weight:600;border-radius:2px;white-space:nowrap;">Assume</div>
+                </div>
+              </div>
+            </div>
+            <div style="font-size:12px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:oklch(0.52 0.012 75);margin-bottom:8px;">Scope · 30%</div>
+            <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:22px;">
+              <div style="display:flex;align-items:center;gap:16px;border:1px solid oklch(0.87 0.010 75);background:oklch(1 0 0);padding:13px 16px;border-radius:2px;">
+                <div style="flex:1;font-family:Spectral,Georgia,serif;font-size:16px;line-height:1.45;">Is the agent-facing portal the whole ask, or is the customer-facing claims tracker in scope too?</div>
+                <div style="flex:none;display:flex;gap:6px;align-items:center;">
+                  <div style="border:1px solid oklch(0.24 0.012 75);padding:7px 12px;font-size:12px;font-weight:600;border-radius:2px;white-space:nowrap;">Copy</div>
+                  <div style="border:1px solid oklch(0.82 0.012 75);color:oklch(0.38 0.012 75);padding:7px 12px;font-size:12px;font-weight:600;border-radius:2px;white-space:nowrap;">Answer</div>
+                  <div style="border:1px solid oklch(0.58 0.075 250);color:oklch(0.42 0.06 250);background:oklch(0.93 0.02 250);padding:7px 12px;font-size:12px;font-weight:600;border-radius:2px;white-space:nowrap;">Assume</div>
+                </div>
+              </div>
+            </div>
+            <div style="border-left:3px solid oklch(0.72 0.155 78);background:oklch(0.94 0.030 85);padding:14px 18px;margin-top:auto;">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:oklch(0.52 0.125 70);margin-bottom:6px;">Drafted email · editable</div>
+              <div style="font-family:Spectral,Georgia,serif;font-size:14.5px;line-height:1.6;color:oklch(0.30 0.012 75);">Hi Dana — thanks for sending the RFP through. Before we can put a responsible shape on the work, four things would help&hellip;</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ══ ROW: founders-tab slots (settings / builder / list) ══ -->
+    <div style="display:flex;gap:44px;align-items:flex-start;width:max-content;">
+
+      <!-- SHOT 4 · FIRM SETTINGS -->
+      <div id="shot-settings" style="width:1080px;">
+        <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:10px;">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:oklch(0.52 0.125 70);">S4</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:oklch(0.52 0.012 75);">Firm settings — discovery, T&amp;M, fixed price</span>
+        </div>
+        <div data-screen-label="S4 Firm settings" style="background:oklch(0.99 0.006 75);border:1px solid oklch(0.84 0.012 75);border-radius:2px;box-shadow:0 24px 60px -30px oklch(0.24 0.012 75 / 0.35);height:680px;display:flex;flex-direction:column;overflow:hidden;">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 28px;border-bottom:1px solid oklch(0.90 0.008 75);">
+            <div style="display:flex;align-items:center;gap:32px;">
+              <div style="display:flex;align-items:center;gap:10px;"><div style="display:flex;width:20px;height:20px;gap:2px;"><div style="flex:0 0 60%;background:oklch(0.24 0.012 75);"></div><div style="flex:1;background:oklch(0.72 0.155 78);"></div></div><div style="font-weight:700;font-size:15px;letter-spacing:-0.025em;">FirmGround</div></div>
+              <div style="display:flex;gap:20px;font-size:13.5px;">
+                <div style="color:oklch(0.50 0.012 75);">Submissions</div>
+                <div style="color:oklch(0.50 0.012 75);">Rubrics</div>
+                <div style="font-weight:700;border-bottom:2px solid oklch(0.24 0.012 75);padding-bottom:2px;">Firm settings</div>
+              </div>
+            </div>
+            <div style="width:30px;height:30px;border-radius:50%;background:oklch(0.90 0.055 85);border:1px solid oklch(0.80 0.06 85);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:oklch(0.42 0.09 75);">AH</div>
+          </div>
+          <div style="padding:26px 34px 34px;flex:1;min-height:0;display:flex;flex-direction:column;">
+            <div style="font-size:24px;font-weight:700;letter-spacing:-0.02em;margin-bottom:4px;">How your firm contracts</div>
+            <div style="font-size:14px;color:oklch(0.42 0.012 75);max-width:66ch;margin-bottom:24px;">Which engagement models you'll use, and how complete the material must be before FirmGround says one is supported. Set once by leadership; every score reads from here.</div>
+            <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:26px;">
+              <div style="display:flex;align-items:center;gap:14px;border:1px solid oklch(0.87 0.010 75);background:oklch(1 0 0);padding:14px 18px;border-radius:2px;">
+                <div style="width:18px;height:18px;background:oklch(0.24 0.012 75);border-radius:2px;flex:none;display:flex;align-items:center;justify-content:center;color:oklch(0.96 0.008 75);font-size:11px;font-weight:700;">✓</div>
+                <div style="flex:1;"><div style="font-size:15px;font-weight:700;">Paid discovery</div><div style="font-size:13px;color:oklch(0.46 0.012 75);">The default recommendation when the material clears no other bar</div></div>
+                <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:oklch(0.52 0.012 75);white-space:nowrap;">always available</div>
+              </div>
+              <div style="display:flex;align-items:center;gap:14px;border:1px solid oklch(0.87 0.010 75);background:oklch(1 0 0);padding:14px 18px;border-radius:2px;">
+                <div style="width:18px;height:18px;background:oklch(0.24 0.012 75);border-radius:2px;flex:none;display:flex;align-items:center;justify-content:center;color:oklch(0.96 0.008 75);font-size:11px;font-weight:700;">✓</div>
+                <div style="flex:1;"><div style="font-size:15px;font-weight:700;">Time and materials</div><div style="font-size:13px;color:oklch(0.46 0.012 75);">Capped or open</div></div>
+                <div style="display:flex;align-items:center;gap:8px;"><div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.06em;text-transform:uppercase;color:oklch(0.52 0.012 75);">min. score</div><div style="border:1px solid oklch(0.82 0.012 75);background:oklch(0.97 0.006 75);padding:7px 12px;font-family:'JetBrains Mono',monospace;font-size:13.5px;font-weight:700;border-radius:2px;">60</div></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:14px;border:2px solid oklch(0.72 0.155 78);background:oklch(0.965 0.014 85);padding:14px 18px;border-radius:2px;">
+                <div style="width:18px;height:18px;background:oklch(0.24 0.012 75);border-radius:2px;flex:none;display:flex;align-items:center;justify-content:center;color:oklch(0.96 0.008 75);font-size:11px;font-weight:700;">✓</div>
+                <div style="flex:1;"><div style="font-size:15px;font-weight:700;">Phased fixed price</div><div style="font-size:13px;color:oklch(0.46 0.012 75);">Fix a phase, re-scope at its end — the bar is highest here</div></div>
+                <div style="display:flex;align-items:center;gap:8px;"><div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.06em;text-transform:uppercase;color:oklch(0.52 0.125 70);">min. score</div><div style="border:1px solid oklch(0.72 0.155 78);background:oklch(1 0 0);padding:7px 12px;font-family:'JetBrains Mono',monospace;font-size:13.5px;font-weight:700;border-radius:2px;">80</div></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:14px;border:1px solid oklch(0.90 0.008 75);padding:14px 18px;border-radius:2px;">
+                <div style="width:18px;height:18px;border:1px solid oklch(0.74 0.012 75);border-radius:2px;flex:none;"></div>
+                <div style="flex:1;"><div style="font-size:15px;font-weight:700;color:oklch(0.52 0.012 75);">Fixed price, whole engagement</div><div style="font-size:13px;color:oklch(0.55 0.012 75);">Off — FirmGround will never recommend one</div></div>
+              </div>
+            </div>
+            <div style="border-left:3px solid oklch(0.24 0.012 75);background:oklch(0.97 0.006 75);padding:12px 16px;font-size:13.5px;line-height:1.55;color:oklch(0.38 0.012 75);max-width:72ch;margin-top:auto;">The floors test the <em>weakest</em> criterion, never the average — a strong brief with one hole doesn't clear a bar. Nobody is ever asked what model they want; the material decides.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SHOT 5 · RUBRIC BUILDER -->
+      <div id="shot-builder" style="width:1080px;">
+        <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:10px;">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:oklch(0.52 0.125 70);">S5</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:oklch(0.52 0.012 75);">Rubric builder — a criterion in progress</span>
+        </div>
+        <div data-screen-label="S5 Rubric builder" style="background:oklch(0.99 0.006 75);border:1px solid oklch(0.84 0.012 75);border-radius:2px;box-shadow:0 24px 60px -30px oklch(0.24 0.012 75 / 0.35);height:680px;display:flex;flex-direction:column;overflow:hidden;">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 28px;border-bottom:1px solid oklch(0.90 0.008 75);">
+            <div style="display:flex;align-items:center;gap:32px;">
+              <div style="display:flex;align-items:center;gap:10px;"><div style="display:flex;width:20px;height:20px;gap:2px;"><div style="flex:0 0 60%;background:oklch(0.24 0.012 75);"></div><div style="flex:1;background:oklch(0.72 0.155 78);"></div></div><div style="font-weight:700;font-size:15px;letter-spacing:-0.025em;">FirmGround</div></div>
+              <div style="display:flex;gap:20px;font-size:13.5px;">
+                <div style="color:oklch(0.50 0.012 75);">Submissions</div>
+                <div style="font-weight:700;border-bottom:2px solid oklch(0.24 0.012 75);padding-bottom:2px;">Rubrics</div>
+                <div style="color:oklch(0.50 0.012 75);">Firm settings</div>
+              </div>
+            </div>
+            <div style="width:30px;height:30px;border-radius:50%;background:oklch(0.90 0.055 85);border:1px solid oklch(0.80 0.06 85);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:oklch(0.42 0.09 75);">AH</div>
+          </div>
+          <div style="padding:26px 34px 34px;flex:1;min-height:0;display:flex;flex-direction:column;">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:oklch(0.52 0.012 75);margin-bottom:6px;">Rubrics / SaaS platform · draft</div>
+            <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:20px;gap:20px;">
+              <div style="font-size:24px;font-weight:700;letter-spacing:-0.02em;">SaaS platform</div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:oklch(0.52 0.012 75);">6 of 9 criteria written</div>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;">
+              <div style="border:1px solid oklch(0.24 0.012 75);padding:6px 12px;font-size:13px;font-weight:600;border-radius:2px;">Customer Context</div>
+              <div style="border:1px solid oklch(0.24 0.012 75);padding:6px 12px;font-size:13px;font-weight:600;border-radius:2px;">Problem / Rationale</div>
+              <div style="border:2px solid oklch(0.72 0.155 78);background:oklch(0.965 0.014 85);padding:6px 12px;font-size:13px;font-weight:700;border-radius:2px;">Success Metrics — editing</div>
+              <div style="border:1px solid oklch(0.24 0.012 75);padding:6px 12px;font-size:13px;font-weight:600;border-radius:2px;">Scope</div>
+              <div style="border:1px solid oklch(0.24 0.012 75);padding:6px 12px;font-size:13px;font-weight:600;border-radius:2px;">Budget</div>
+              <div style="border:1px solid oklch(0.24 0.012 75);padding:6px 12px;font-size:13px;font-weight:600;border-radius:2px;">Timeline</div>
+              <div style="border:1px dashed oklch(0.72 0.012 75);color:oklch(0.50 0.012 75);padding:6px 12px;font-size:13px;border-radius:2px;">+ Add criterion</div>
+            </div>
+            <div style="border:1px solid oklch(0.90 0.008 75);background:oklch(0.975 0.006 75);padding:22px 24px 26px;flex:1;display:flex;flex-direction:column;justify-content:space-between;">
+              <div><div style="font-size:18px;font-weight:700;letter-spacing:-0.015em;margin-bottom:16px;">Success Metrics</div>
+              <div style="margin-bottom:16px;">
+                <div style="font-size:13px;font-weight:600;margin-bottom:6px;">What this criterion asks for</div>
+                <div style="border:1px solid oklch(0.82 0.012 75);background:oklch(1 0 0);padding:11px 14px;font-size:14.5px;line-height:1.55;border-radius:2px;">How the client will judge the engagement a success — quantitative targets, who measures them, and by when.</div>
+              </div>
+              <div style="font-size:13px;font-weight:600;margin-bottom:2px;">Ideal examples</div>
+              <div style="font-size:12.5px;color:oklch(0.50 0.012 75);margin-bottom:8px;">Alternatives, in your own words — each one is independently a 100%.</div>
+              <div style="display:flex;flex-direction:column;gap:8px;">
+                <div style="border:1px solid oklch(0.87 0.010 75);background:oklch(1 0 0);padding:11px 15px;font-family:Spectral,Georgia,serif;font-size:15px;line-height:1.55;border-radius:2px;">"Reduce claim-processing time from 12 days to 3 by Q4, measured by the ops dashboard the client already runs."</div>
+                <div style="border:2px solid oklch(0.24 0.012 75);background:oklch(1 0 0);padding:11px 15px;font-family:Spectral,Georgia,serif;font-size:15px;line-height:1.55;border-radius:2px;">"Self-serve onboarding completion above 60% within 90 days of launch<span style="color:oklch(0.52 0.125 70);">|</span></div>
+              </div>
+              </div><div style="display:flex;gap:12px;align-items:center;margin-top:16px;">
+                <div style="background:oklch(0.24 0.012 75);color:oklch(0.96 0.008 75);padding:10px 18px;font-size:13.5px;font-weight:600;border-radius:2px;">Save criterion</div>
+                <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:oklch(0.52 0.012 75);">Usable as soon as one criterion exists — no publish step</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SHOT 6 · RUBRIC LIST -->
+      <div id="shot-rubrics" style="width:1080px;">
+        <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:10px;">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:oklch(0.52 0.125 70);">S6</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:oklch(0.52 0.012 75);">Rubric list — one per line of business</span>
+        </div>
+        <div data-screen-label="S6 Rubric list" style="background:oklch(0.99 0.006 75);border:1px solid oklch(0.84 0.012 75);border-radius:2px;box-shadow:0 24px 60px -30px oklch(0.24 0.012 75 / 0.35);height:680px;display:flex;flex-direction:column;overflow:hidden;">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 28px;border-bottom:1px solid oklch(0.90 0.008 75);">
+            <div style="display:flex;align-items:center;gap:32px;">
+              <div style="display:flex;align-items:center;gap:10px;"><div style="display:flex;width:20px;height:20px;gap:2px;"><div style="flex:0 0 60%;background:oklch(0.24 0.012 75);"></div><div style="flex:1;background:oklch(0.72 0.155 78);"></div></div><div style="font-weight:700;font-size:15px;letter-spacing:-0.025em;">FirmGround</div></div>
+              <div style="display:flex;gap:20px;font-size:13.5px;">
+                <div style="color:oklch(0.50 0.012 75);">Submissions</div>
+                <div style="font-weight:700;border-bottom:2px solid oklch(0.24 0.012 75);padding-bottom:2px;">Rubrics</div>
+                <div style="color:oklch(0.50 0.012 75);">Firm settings</div>
+              </div>
+            </div>
+            <div style="width:30px;height:30px;border-radius:50%;background:oklch(0.90 0.055 85);border:1px solid oklch(0.80 0.06 85);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:oklch(0.42 0.09 75);">AH</div>
+          </div>
+          <div style="padding:26px 34px 34px;flex:1;min-height:0;display:flex;flex-direction:column;">
+            <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:20px;gap:20px;">
+              <div>
+                <div style="font-size:24px;font-weight:700;letter-spacing:-0.02em;margin-bottom:4px;">Rubrics</div>
+                <div style="font-size:14px;color:oklch(0.42 0.012 75);">Your firm's definition of a complete brief, one per kind of work.</div>
+              </div>
+              <div style="flex:none;background:oklch(0.24 0.012 75);color:oklch(0.96 0.008 75);padding:11px 20px;font-size:14px;font-weight:600;border-radius:2px;white-space:nowrap;">New rubric</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:1px;background:oklch(0.90 0.008 75);border:1px solid oklch(0.90 0.008 75);flex:1;">
+              <div style="background:oklch(1 0 0);display:flex;align-items:center;gap:20px;padding:20px 24px;flex:1;">
+                <div style="flex:1;"><div style="font-size:17px;font-weight:700;">SaaS platform</div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:oklch(0.52 0.012 75);margin-top:4px;">v2 · 9 criteria · scored 14 inquiries</div></div>
+                <div style="border:1px solid oklch(0.72 0.155 78);background:oklch(0.94 0.030 85);color:oklch(0.52 0.125 70);padding:4px 10px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;border-radius:2px;">Most used</div>
+                <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:oklch(0.45 0.012 75);">edited 2 days ago</div>
+              </div>
+              <div style="background:oklch(1 0 0);display:flex;align-items:center;gap:20px;padding:20px 24px;flex:1;">
+                <div style="flex:1;"><div style="font-size:17px;font-weight:700;">Marketing website</div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:oklch(0.52 0.012 75);margin-top:4px;">v1 · 7 criteria · scored 6 inquiries</div></div>
+                <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:oklch(0.45 0.012 75);">edited 3 weeks ago</div>
+              </div>
+              <div style="background:oklch(1 0 0);display:flex;align-items:center;gap:20px;padding:20px 24px;flex:1;">
+                <div style="flex:1;"><div style="font-size:17px;font-weight:700;">Shopify store</div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:oklch(0.52 0.012 75);margin-top:4px;">v1 · 6 criteria · scored 2 inquiries</div></div>
+                <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:oklch(0.45 0.012 75);">edited yesterday</div>
+              </div>
+            </div>
+            <div style="font-size:13.5px;line-height:1.6;color:oklch(0.42 0.012 75);margin-top:16px;">Incoming inquiries are matched against all three automatically — nobody picks a rubric before uploading.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+</x-dc>
+</body>
+</html>
