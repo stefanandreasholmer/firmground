@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- FirmGround brandmark: two vertical bars (light + accent) on a dark
+       tile, matching the light-on-dark lockup used in the site footer.
+       Colors are the sRGB equivalents of the site's OKLCH palette. -->
+  <rect width="32" height="32" rx="5" fill="#231F19"/>
+  <rect x="6"    y="6" width="12"  height="20" fill="#EEEAE5"/>
+  <rect x="19.6" y="6" width="6.4" height="20" fill="#D99600"/>
+</svg>
