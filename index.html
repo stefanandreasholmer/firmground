@@ -201,14 +201,14 @@
           <div class="eyebrow">Free</div>
           <div class="plan__price">$0</div>
           <p class="plan__desc">One user, three open opportunities at a time.</p>
-          <a class="btn btn--outline btn--sm" href="#pricing">Try Free</a>
+          <button class="btn btn--outline btn--sm" type="button" data-open-waitlist>Try Free</button>
         </div>
 
         <div class="plan plan--featured">
           <div class="eyebrow eyebrow--accent">Firm</div>
           <div class="plan__price">$149<span class="plan__price-note">/month, or $1,490 a year</span></div>
           <p class="plan__desc">No limit on open opportunities. Everyone in the firm, no seat counting. Shared rubrics.</p>
-          <a class="btn btn--accent btn--sm" href="#pricing">Put the firm on it</a>
+          <button class="btn btn--accent btn--sm" type="button" data-open-waitlist>Join the waitlist</button>
         </div>
       </div>
     </section>
@@ -231,6 +231,76 @@
     </div>
   </footer>
 
+  <!-- ===================================================================
+       WAITLIST MODAL
+       Our own styled dialog wrapping a MailerLite classic embed form.
+       MailerLite's webforms.min.js (loaded below) handles submission,
+       validation, and the success state by toggling .row-form /
+       .row-success inside #mlb2-44300183. Keep the container id, the
+       fields[email] input, and the hidden ml-submit / anticsrf inputs —
+       those are the hooks their script relies on.
+  ==================================================================== -->
+  <div class="modal" id="waitlist-modal" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="waitlist-title">
+      <button class="modal__close" type="button" aria-label="Close" data-close>&times;</button>
+
+      <div id="mlb2-44300183" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-44300183">
+        <div class="ml-form-align-center">
+          <div class="ml-form-embedWrapper embedForm">
+
+            <div class="ml-form-embedBody row-form">
+              <div class="ml-form-embedContent">
+                <h4 id="waitlist-title">Join the waitlist</h4>
+                <p>FirmGround isn't live yet — leave your email and we'll let you know the moment it is.</p>
+              </div>
+
+              <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/539507/forms/194408964314629876/subscribe" data-code="" method="post" target="_blank">
+                <div class="ml-form-formContent">
+                  <div class="ml-form-fieldRow ml-last-item">
+                    <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                      <input aria-label="email" type="email" class="form-control" name="fields[email]" placeholder="Email address…" autocomplete="email">
+                    </div>
+                  </div>
+                </div>
+
+                <input type="hidden" name="ml-submit" value="1">
+
+                <div class="ml-form-embedSubmit">
+                  <button type="submit" class="primary">Join Waitlist</button>
+                  <button disabled="disabled" style="display:none;" type="button" class="loading">
+                    <div class="ml-form-embedSubmitLoad"></div>
+                    <span class="sr-only">Loading...</span>
+                  </button>
+                </div>
+
+                <input type="hidden" name="anticsrf" value="true">
+              </form>
+            </div>
+
+            <div class="ml-form-successBody row-success" style="display:none;">
+              <div class="ml-form-successContent">
+                <h4>You're on the list</h4>
+                <p>We'll email you the moment FirmGround is live.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="js/main.js"></script>
+
+  <!-- MailerLite webform runtime + success handler -->
+  <script>
+    function ml_webform_success_44300183() {
+      var $ = ml_jQuery || jQuery;
+      $('.ml-subscribe-form-44300183 .row-success').show();
+      $('.ml-subscribe-form-44300183 .row-form').hide();
+    }
+  </script>
+  <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v83147fa8ce2d95cb73ece7f28b469519" type="text/javascript"></script>
 </body>
 </html>
