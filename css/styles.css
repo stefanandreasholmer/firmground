@@ -488,6 +488,10 @@ img { max-width: 100%; }
   .steps { padding-top: 72px; }
   .pricing { padding-top: 64px; padding-bottom: 80px; }
 
-  /* Keep alternating steps stacking image-below-copy consistently */
-  .step, .step--reverse { flex-direction: column; }
+  /* Stack copy above screenshot. Reset the flex basis: the 380/420px
+     values are widths for the desktop row layout, but once the axis is
+     vertical they would force each block to that HEIGHT — leaving dead
+     space under the text and inside the screenshot frame. */
+  .step, .step--reverse { flex-direction: column; align-items: stretch; gap: 28px; }
+  .step__copy, .step__figure { flex: 0 0 auto; width: 100%; }
 }
